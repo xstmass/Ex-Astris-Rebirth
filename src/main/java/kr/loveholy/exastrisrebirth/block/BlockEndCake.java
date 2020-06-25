@@ -16,6 +16,7 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
+import net.minecraft.util.ChatComponentText;
 
 public class BlockEndCake extends BlockCake {
 	@SideOnly(Side.CLIENT)
@@ -86,8 +87,12 @@ public class BlockEndCake extends BlockCake {
 			}
 			else
 			{
+				if(!world.isRemote) {
+				player.addChatMessage(new ChatComponentText("§3Накорми меня глазами"));
+			}
 				nomEndCake(world, x, y, z, player);
 				return true;
+
 			}
 		}
 		//ExAstris.ExAstris.log.info("METAMEAMETA RETURNFALSE" + meta +" "+item.getUnlocalizedName());
@@ -124,7 +129,7 @@ public class BlockEndCake extends BlockCake {
 	@Override
 	public int onBlockPlaced(World world, int x, int y, int z, int side, float hx, float hy, float hz, int meta)
     {
-        return meta = 5;
+        return meta = 0;
     }
 	
 	@Override

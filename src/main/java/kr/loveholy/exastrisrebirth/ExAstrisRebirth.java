@@ -9,7 +9,6 @@ import kr.loveholy.exastrisrebirth.compatibility.ModBloodMagic;
 import kr.loveholy.exastrisrebirth.compatibility.ModBotania;
 import kr.loveholy.exastrisrebirth.compatibility.ModChisel;
 import kr.loveholy.exastrisrebirth.compatibility.ModDraconicEvolution;
-import kr.loveholy.exastrisrebirth.compatibility.ModFoodPlus;
 import kr.loveholy.exastrisrebirth.compatibility.ModMetallurgy;
 import kr.loveholy.exastrisrebirth.compatibility.ModMineFactoryReloaded;
 import kr.loveholy.exastrisrebirth.compatibility.ModNatura;
@@ -182,12 +181,6 @@ public class ExAstrisRebirth {
 		{
 			log.info("+++ - Found DraconicEvolution");
 			ModDraconicEvolution.init();
-		}
-		
-		if (Loader.isModLoaded("FoodPlus"))
-		{
-			log.info("+++ - Found FoodPlus");
-			ModFoodPlus.init();
 		}
 		
 		if (Loader.isModLoaded("witchery"))
