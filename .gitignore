@@ -1,4 +1,5 @@
 .gradle/4.0/taskArtifacts/*
+.settings/*
 .gradle/gradle.log
 *~
 *.iml
