@@ -88,7 +88,7 @@ public class BlockEndCake extends BlockCake {
 			else
 			{
 				if(!world.isRemote) {
-				player.addChatMessage(new ChatComponentText("§3Накорми меня глазами"));
+				player.addChatMessage(new ChatComponentText("§3Feed me eyes"));
 			}
 				nomEndCake(world, x, y, z, player);
 				return true;
