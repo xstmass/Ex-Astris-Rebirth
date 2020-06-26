@@ -1,8 +1,6 @@
 Ex Astris Rebirth
 =========
-Fixed Build
+Fixed Build, removed Food Plus integration and simple changes in BlockEndCake
 
 
 Add mod integration to your SkyBlock.
-
-Please put all suggestions in the issue tracker (preferably using the [Suggestion] Tag).
