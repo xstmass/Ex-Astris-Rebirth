@@ -7,28 +7,28 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 public class ItemStackable extends Item {
-	private final String unlocalizedName;
+    private final String unlocalizedName;
 
-	public ItemStackable(String arg1) {
-		super();
-		this.setCreativeTab(ExAstrisRebirth.TAB);
-		this.setMaxStackSize(maxStackSize);
-		unlocalizedName = arg1;
-	}
+    public ItemStackable(String arg1) {
+        super();
+        this.setCreativeTab(ExAstrisRebirth.TAB);
+        this.setMaxStackSize(maxStackSize);
+        unlocalizedName = arg1;
+    }
 
-	@Override
-	public String getUnlocalizedName() {
-		return ExAstrisRebirthData.MODID + "." + unlocalizedName;
-	}
+    @Override
+    public String getUnlocalizedName() {
+        return ExAstrisRebirthData.MODID + "." + unlocalizedName;
+    }
 
-	@Override
-	public String getUnlocalizedName(ItemStack item) {
-		return ExAstrisRebirthData.MODID + "." + unlocalizedName;
-	}
+    @Override
+    public String getUnlocalizedName(ItemStack item) {
+        return ExAstrisRebirthData.MODID + "." + unlocalizedName;
+    }
 
-	@Override
-	public void registerIcons(IIconRegister register) {
-		this.itemIcon = register.registerIcon(ExAstrisRebirthData.MODID + ":"+ unlocalizedName);
-	}
+    @Override
+    public void registerIcons(IIconRegister register) {
+        this.itemIcon = register.registerIcon(ExAstrisRebirthData.MODID + ":" + unlocalizedName);
+    }
 
 }

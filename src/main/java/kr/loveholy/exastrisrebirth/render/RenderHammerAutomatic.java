@@ -1,26 +1,22 @@
 package kr.loveholy.exastrisrebirth.render;
 
-import org.lwjgl.opengl.GL11;
-
 import kr.loveholy.exastrisrebirth.tileentity.TileEntityHammerAutomatic;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
+import org.lwjgl.opengl.GL11;
 
-public class RenderHammerAutomatic extends TileEntitySpecialRenderer
-{
+public class RenderHammerAutomatic extends TileEntitySpecialRenderer {
     private static EntityItem item;
 
     private final float amntMaxRaise = 0.31f;
     private final float percShowItem = 0.60f;
-    
+
     @Override
-    public void renderTileEntityAt(TileEntity tileentity, double x, double y, double z, float f)
-    {
-        if (item == null)
-        {
+    public void renderTileEntityAt(TileEntity tileentity, double x, double y, double z, float f) {
+        if (item == null) {
             item = new EntityItem(tileentity.getWorldObj());
         }
 
@@ -34,8 +30,7 @@ public class RenderHammerAutomatic extends TileEntitySpecialRenderer
         ItemStack stack = tile.stackInProgress;
 
         // show the item to be squashed
-        if (prog >= percShowItem && stack != null)
-        {
+        if (prog >= percShowItem && stack != null) {
             GL11.glPushMatrix();
             item.setEntityItemStack(stack);
             GL11.glDepthMask(true);
@@ -47,8 +42,7 @@ public class RenderHammerAutomatic extends TileEntitySpecialRenderer
         }
 
         // on the way down
-        if (prog > percMaxRaise)
-        {
+        if (prog > percMaxRaise) {
             percMaxRaise = 1 - percMaxRaise;
             prog = 1 - prog;
         }

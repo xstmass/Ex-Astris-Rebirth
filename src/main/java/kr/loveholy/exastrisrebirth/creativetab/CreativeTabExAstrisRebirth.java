@@ -6,13 +6,13 @@ import net.minecraft.item.Item;
 
 public class CreativeTabExAstrisRebirth extends CreativeTabs {
 
-	public CreativeTabExAstrisRebirth() {
-		super("tabExAstrisRebirth");
-	}
+    public CreativeTabExAstrisRebirth() {
+        super("tabExAstrisRebirth");
+    }
 
-	@Override
-	public Item getTabIconItem() {
-		return Item.getItemFromBlock(ExAstrisRebirthBlock.blockEndCake);
-	}
+    @Override
+    public Item getTabIconItem() {
+        return Item.getItemFromBlock(ExAstrisRebirthBlock.blockEndCake);
+    }
 
 }
